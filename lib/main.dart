@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:store_app/screens/screens.dart';
+import 'package:store_app/screens/update_product_page.dart';
 // import '../helper/api.dart' as http;
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         HomePage.id:(context)=>HomePage(),
+        UpadateProductPage.id:(context)=>UpadateProductPage(),
       },
       initialRoute: HomePage.id,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),

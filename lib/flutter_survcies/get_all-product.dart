@@ -10,10 +10,21 @@ Future<List<ProductModel>> getAllProduct() async{
 
   List<dynamic> data =
   await Api().get(url: 'https://fakestoreapi.com/products');
-
+// print('6');
     List<ProductModel> ProductList=[];
-    for(int i=0;i<data.length;i++){
-      ProductList.add(ProductModel.fromJson(data[i]));}
+    // print('7');
+  try {
+    for (int i = 0; i < data.length; i++) {
+      // print('8');
+      ProductList.add(ProductModel.fromJson(data[i]));
+     // print(ProductList[i]);
+      // print('10');
+    }
+  } catch (e) {
+    print('error in all product servive : $e');
+  }
+    // print('9');
+
     return ProductList;
 
 
